@@ -27,7 +27,7 @@ export const properties = [
     BQ: false,
     price: "25 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.08520,
+    lat: 9.08520,
     lng: 7.49765,
   },
   {
@@ -42,7 +42,7 @@ export const properties = [
     BQ: false,
     price: "9.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785,
+    lat: 9.05785,
     lng: 7.49508,
   },
   {
@@ -57,7 +57,7 @@ export const properties = [
     BQ: false,
     price: "20 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -72,7 +72,7 @@ export const properties = [
     BQ: false,
     price: "25 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.04084,
+    lat: 9.04084,
     lng: 7.51931,
   },
   {
@@ -87,7 +87,7 @@ export const properties = [
     BQ: true,
     price: "6.2 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -102,7 +102,7 @@ export const properties = [
     BQ: true,
     price: "9.4 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.97895,
+    lat: 8.97895,
     lng: 7.37654,
   },
   {
@@ -117,7 +117,7 @@ export const properties = [
     BQ: false,
     price: "25 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00900,
+    lat: 9.00900,
     lng: 7.49000,
   },
   {
@@ -132,7 +132,7 @@ export const properties = [
     BQ: false,
     price: "30 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.89635,
+    lat: 8.89635,
     lng: 7.24371,
   },
   {
@@ -147,7 +147,7 @@ export const properties = [
     BQ: true,
     price: "8 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -162,7 +162,7 @@ export const properties = [
     parking: true,
     price: "7.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.97895,
+    lat: 8.97895,
     lng: 7.37654,
   },
   {
@@ -177,7 +177,7 @@ export const properties = [
     BQ: true,
     price: "3.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -192,7 +192,7 @@ export const properties = [
     BQ: false,
     price: "15 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785, 
+    lat: 9.05785, 
     lng: 7.49508,
   },
   {
@@ -207,7 +207,7 @@ export const properties = [
     BQ: false,
     price: "30 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.08520,
+    lat: 9.08520,
     lng: 7.49765,
   },
   {
@@ -222,7 +222,7 @@ export const properties = [
     parking: true,
     price: "4.2 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -237,7 +237,7 @@ export const properties = [
     BQ: false,
     price: "25 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -252,7 +252,7 @@ export const properties = [
     BQ: true,
     price: "60 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -267,7 +267,7 @@ export const properties = [
     BQ: false,
     price: "7.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
     {
@@ -282,7 +282,7 @@ export const properties = [
     BQ: false,
     price: "30 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -297,7 +297,7 @@ export const properties = [
     BQ: true,
     price: "21.7 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.97895,
+    lat: 8.97895,
     lng: 7.37654,
   },
   {
@@ -312,7 +312,7 @@ export const properties = [
     BQ: false,
     price: "30 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -327,7 +327,7 @@ export const properties = [
     BQ: false,
     price: "2 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -342,7 +342,7 @@ export const properties = [
     BQ: false,
     price: "13.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785, 
+    lat: 9.05785, 
     lng: 7.49508,
   },
   {
@@ -357,7 +357,7 @@ export const properties = [
     BQ: false,
     price: "2.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -372,7 +372,7 @@ export const properties = [
     BQ: true,
     price: "40 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.04084,
+    lat: 9.04084,
     lng: 7.51931,
   },
   {
@@ -387,7 +387,7 @@ export const properties = [
     BQ: false,
     price: "7.2 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -402,7 +402,7 @@ export const properties = [
     BQ: false,
     price: "4.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -417,7 +417,7 @@ export const properties = [
     BQ: true,
     price: "50 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.08520,
+    lat: 9.08520,
     lng: 7.49765,
   },
   {
@@ -432,7 +432,7 @@ export const properties = [
     parking: false,
     price: "18 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785, 
+    lat: 9.05785, 
     lng: 7.49508,
   },
   {
@@ -447,7 +447,7 @@ export const properties = [
     BQ: false,
     price: "3.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -462,7 +462,7 @@ export const properties = [
     BQ: true,
     price: "50 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.04084,
+    lat: 9.04084,
     lng: 7.51931,
   },
   {
@@ -477,7 +477,7 @@ export const properties = [
     BQ: false,
     price: "6 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -492,7 +492,7 @@ export const properties = [
     parking: false,
     price: "40 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -507,7 +507,7 @@ export const properties = [
     BQ: false,
     price: "25 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -522,7 +522,7 @@ export const properties = [
     BQ: false,
     price: "20 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785, 
+    lat: 9.05785, 
     lng: 7.49508,
   },
   {
@@ -537,7 +537,7 @@ export const properties = [
     BQ: true,
     price: "45 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
     {
@@ -552,7 +552,7 @@ export const properties = [
     BQ: false,
     price: "3.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -567,7 +567,7 @@ export const properties = [
     BQ: false,
     price: "45 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785, 
+    lat: 9.05785, 
     lng: 7.49508,
   },
   {
@@ -582,7 +582,7 @@ export const properties = [
     BQ: true,
     price: "9 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -597,7 +597,7 @@ export const properties = [
     BQ: true,
     price: "50 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.04084,
+    lat: 9.04084,
     lng: 7.51931,
   },
   {
@@ -612,7 +612,7 @@ export const properties = [
     BQ: true,
     price: "10.3 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -627,7 +627,7 @@ export const properties = [
     BQ: false,
     price: "15.5 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.97895,
+    lat: 8.97895,
     lng: 7.37654,
   },
   {
@@ -642,7 +642,7 @@ export const properties = [
     BQ: false,
     price: "6 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -657,7 +657,7 @@ export const properties = [
     parking: false,
     price: "30 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.05785, 
+    lat: 9.05785, 
     lng: 7.49508,
   },
   {
@@ -672,7 +672,7 @@ export const properties = [
     BQ: true,
     price: "31.1 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.97895,
+    lat: 8.97895,
     lng: 7.37654,
   },
   {
@@ -687,7 +687,7 @@ export const properties = [
     BQ: true,
     price: "9 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -702,7 +702,7 @@ export const properties = [
     BQ: true,
     price: "60 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.04084,
+    lat: 9.04084,
     lng: 7.51931,
   },
   {
@@ -717,7 +717,7 @@ export const properties = [
     parking: true,
     price: "31.1 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.97895,
+    lat: 8.97895,
     lng: 7.37654,
   },
   {
@@ -732,7 +732,7 @@ export const properties = [
     BQ: true,
     price: "9 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 8.87635,
+    lat: 8.87635,
     lng: 7.24371,
   },
   {
@@ -747,7 +747,7 @@ export const properties = [
     BQ: true,
     price: "13.4 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   {
@@ -762,7 +762,7 @@ export const properties = [
     BQ: false,
     price: "20 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.04084,
+    lat: 9.04084,
     lng: 7.51931,
   },
    {
@@ -777,7 +777,7 @@ export const properties = [
     BQ: true,
     price: "11 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
     {
@@ -792,11 +792,11 @@ export const properties = [
     BQ: true,
     price: "24 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00270132779582, 
+    lat: 9.00270132779582, 
     lng: 7.527904585222614,
   },
     {
-    id: 6,
+    id: 54,
     title: "Rehoboth Smart City 1, Pyaksa",
     location: "4 Minutes Drive to Kabusa Garden Estate",
     area: "pyakasa", 
@@ -807,7 +807,7 @@ export const properties = [
     BQ: true,
     price: "6.2 Million Naira",
     schedule: "https://calendar.app.google/xf1evp8ohtsnY7Qo8",
-    lag: 9.00000,
+    lat: 9.00000,
     lng: 7.49000,
   },
   ];

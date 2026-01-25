@@ -208,7 +208,7 @@ export default function EarnPage() {
               <FiPhone className="text-blue-600 text-2xl" />
               <div>
                 <p className="font-semibold">Call Us</p>
-                <p className="text-gray-600 text-sm">+234-807-491-8900</p>
+                <p className="text-gray-600 text-sm">+234-906-169-9005</p>
               </div>
             </div>
 
@@ -303,7 +303,7 @@ export default function EarnPage() {
 
           {/* LOCATION & NIN (Optional for now; not saved unless you add columns) */}
           <div>
-            <label className={labelClass}>Preferred Location (optional)</label>
+            <label className={labelClass}>Location (optional)</label>
             <div className="relative">
               <FiMapPin className="absolute left-3 top-3.5 text-gray-400" />
               <input

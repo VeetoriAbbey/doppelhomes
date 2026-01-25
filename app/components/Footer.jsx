@@ -46,7 +46,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/properties" className="hover:text-white transition">
+                <Link href="/properties/all" className="hover:text-white transition">
                   Properties
                 </Link>
               </li>
@@ -101,24 +101,32 @@ export default function Footer() {
             <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/share/1CdReFxhX4/"
+                target="_blank"
+              rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-700 text-white transition"
               >
                 <FaFacebookF />
               </a>
               <a
                 href="https://www.instagram.com/doppelgroups_ltd?igsh=bDBpdnJtdWhobWVq"
+                target="_blank"
+              rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-700 text-white transition"
               >
                 <FaInstagram />
               </a>
               <a
                 href="https://www.tiktok.com/@doppel.homes.ltd"
+                target="_blank"
+              rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-700 text-white transition"
               >
                 <FaTiktok />
               </a>
               <a
                 href="https://wa.me/2349061696005"
+                target="_blank"
+              rel="noreferrer"
                 className="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 hover:bg-green-700 text-white transition"
               >
                 <FaWhatsapp />

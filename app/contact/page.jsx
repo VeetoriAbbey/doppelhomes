@@ -84,17 +84,28 @@ export default function ContactPage() {
 
     setStatus({ type: "loading", message: "Sending..." });
 
-    try {
-      /**
-       * ✅ Option A (No backend yet): simulate success
-       * Replace this with a real API route when you're ready
-       */
-      await new Promise((r) => setTimeout(r, 900));
+      try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        setStatus({
+          type: "error",
+          message: data?.error || "Something went wrong. Please try again.",
+        });
+        return;
+      }
 
       setStatus({
         type: "success",
         message: "Message sent! We’ll get back to you shortly.",
       });
+
       setForm({
         fullName: "",
         email: "",
@@ -105,7 +116,7 @@ export default function ContactPage() {
     } catch (error) {
       setStatus({
         type: "error",
-        message: "Something went wrong. Please try again.",
+        message: "Network error. Please try again.",
       });
     }
   }

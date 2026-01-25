@@ -5,6 +5,8 @@ import PropertyStat from "@/components/PropertyStat";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import VideoSection from "@/components/VideoSection";
 import PropertyListing from "@/components/PropertyListing";
+import Testimonials from "@/components/Testimonials";
+import ContactPage from "@/app/contact/page";
 
 
 
@@ -18,6 +20,8 @@ export default function Home() {
     <FeaturedProperties />
     <VideoSection />
     <PropertyListing />
+    <Testimonials />
+    <ContactPage />
 
   
 

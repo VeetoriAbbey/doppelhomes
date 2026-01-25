@@ -431,45 +431,7 @@ export default function AboutPage() {
         </motion.div>
       </section>
 
-      {/* TEAM */}
-      <section className="bg-neutral-900">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
-          <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.25 }} variants={stagger}>
-            <motion.h2 variants={fadeUp} className="text-3xl font-semibold tracking-tight text-white">
-              People behind the process
-            </motion.h2>
-            <motion.p variants={fadeUp} className="mt-4 max-w-3xl text-white/80 leading-relaxed">
-              Our team focuses on guidance, verification, and client support — with clear communication
-              at every stage.
-            </motion.p>
-
-            <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {[
-                { name: "Client Support Lead", role: "Customer Success", img: "/images/team-1.jpg" },
-                { name: "Verification Officer", role: "Due Diligence", img: "/images/team-2.jpg" },
-                { name: "Sales & Advisory", role: "Land Acquisition", img: "/images/team-3.jpg" },
-              ].map((m, i) => (
-                <motion.div
-                  key={m.name}
-                  variants={fadeUp}
-                  custom={i}
-                  className="overflow-hidden rounded-2xl bg-white/5 ring-1 ring-white/10"
-                >
-                  <div className="relative h-56 w-full">
-                    <Image src={m.img} alt={m.name} fill className="object-cover" />
-                  </div>
-                  <div className="p-6">
-                    <p className="font-semibold text-white">{m.name}</p>
-                    <p className="mt-1 text-sm text-white/75">{m.role}</p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* CTA */}
+          {/* CTA */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:py-20">
         <motion.div
           initial={{ opacity: 0, y: 26 }}
