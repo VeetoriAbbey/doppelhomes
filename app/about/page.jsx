@@ -144,36 +144,26 @@ export default function AboutPage() {
               right steps.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-8 grid gap-3 sm:grid-cols-2 h-5 w-5 text-blue-800" strokeWidth={2.2}>
-              {[
-                {
-                  icon: MapPin,
-                  title: "Local knowledge",
-                  desc: "We understand locations, processes, and market realities.",
-                },
-                {
-                  icon: ShieldCheck,
-                  title: "Risk reduction",
-                  desc: "Verification and guidance to help protect your money.",
-                },
-                {
-                  icon: Users,
-                  title: "Human support",
-                  desc: "Clear communication and assistance at every stage.",
-                },
-                {
-                  icon: Building2,
-                  title: "Build-minded",
-                  desc: "Advice on buying land that’s genuinely buildable.",
-                },
-              ].map((f) => (
-                <div key={f.title} className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm">
-                  <f.icon className="h-5 w-5" />
-                  <p className="mt-3 font-semibold text-neutral-900">{f.title}</p>
-                  <p className="mt-1 text-sm text-neutral-700">{f.desc}</p>
-                </div>
-              ))}
-            </motion.div>
+            <motion.div variants={fadeUp} className="mt-8 grid gap-3 sm:grid-cols-2">
+  {[
+    { icon: MapPin, title: "Local knowledge", desc: "We understand locations, processes, and market realities." },
+    { icon: ShieldCheck, title: "Risk reduction", desc: "Verification and guidance to help protect your money." },
+    { icon: Users, title: "Human support", desc: "Clear communication and assistance at every stage." },
+    { icon: Building2, title: "Build-minded", desc: "Advice on buying land that’s genuinely buildable." },
+  ].map((f) => {
+    const Icon = f.icon; // ✅ make it explicit (cleaner)
+    return (
+      <div
+        key={f.title}
+        className="rounded-2xl border border-neutral-200 bg-white p-5 shadow-sm"
+      >
+        <Icon className="h-5 w-5 text-blue-800" strokeWidth={2.2} />
+        <p className="mt-3 font-semibold text-neutral-900">{f.title}</p>
+        <p className="mt-1 text-sm text-neutral-700">{f.desc}</p>
+      </div>
+    );
+  })}
+</motion.div>
           </motion.div>
 
           <motion.div

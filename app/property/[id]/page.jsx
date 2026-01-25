@@ -43,7 +43,7 @@ export default async function PropertyDetailsPage({ params }) {
 
   return (
     // ✅ Prevent tiny horizontal overflow = stops “shake”
-    <main className="max-w-6xl mx-auto px-4 py-20 overflow-x-hidden">
+    <main className="max-w-6xl mx-auto bg-gray-20 px-4 py-20 overflow-x-hidden">
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <div>
           {/* ✅ stronger text on mobile */}
@@ -119,14 +119,14 @@ export default async function PropertyDetailsPage({ params }) {
           <div className="mt-5 flex gap-3 flex-wrap">
             <Link
               href={`/properties/${areaSlug}`}
-              className="border border-gray-300 px-4 py-2 rounded-full transition hover:bg-blue-600 hover:text-white active:scale-[0.98]"
+              className="border border-gray-300 px-4 py-2 rounded-full text-blue-800 transition hover:bg-blue-600 hover:text-white active:scale-[0.98]"
             >
               View more in {areaLabel}
             </Link>
 
             <Link
               href="/properties/all"
-              className="border border-gray-300 px-4 py-2 rounded-full transition hover:bg-blue-600 hover:text-white active:scale-[0.98]"
+              className="border border-gray-300 px-4 py-2 text-blue-800 rounded-full transition hover:bg-blue-600 hover:text-white active:scale-[0.98]"
             >
               Back to all properties
             </Link>
