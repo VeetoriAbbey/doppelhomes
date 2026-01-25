@@ -34,20 +34,25 @@ export default function Testimonials() {
   const next = () =>
     setIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
 
-  // Auto slide
+  // ✅ Auto slide (safe: uses state updater)
   useEffect(() => {
-    const timer = setInterval(next, 6000);
+    const timer = setInterval(() => {
+      setIndex((i) => (i === testimonials.length - 1 ? 0 : i + 1));
+    }, 6000);
     return () => clearInterval(timer);
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto px-6 py-20">
+    <section className="max-w-7xl mx-auto px-6 py-20 overflow-x-hidden">
       <div className="text-center mb-12">
         <p className="text-blue-700 font-semibold">Testimonials</p>
+
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2">
           What Our Clients Say
         </h2>
-        <p className="text-gray-600 max-w-xl mx-auto mt-3">
+
+        {/* ✅ stronger on mobile */}
+        <p className="text-gray-700 md:text-gray-600 max-w-xl mx-auto mt-3">
           Real experiences from people who trusted Doppel Homes with their
           property journey.
         </p>
@@ -57,13 +62,15 @@ export default function Testimonials() {
         <AnimatePresence mode="wait">
           <motion.div
             key={index}
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.4 }}
-            className="bg-white border border-gray-100 shadow-lg rounded-2xl p-8 text-center"
+            // ✅ Use smaller translate + GPU transform to avoid overflow “shake”
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.35 }}
+            className="bg-white border border-gray-100 shadow-lg rounded-2xl p-6 md:p-8 text-center transform-gpu"
           >
-            <p className="text-lg text-gray-700 leading-relaxed">
+            {/* ✅ stronger text on mobile */}
+            <p className="text-base md:text-lg text-gray-800 leading-relaxed">
               “{testimonials[index].quote}”
             </p>
 
@@ -71,7 +78,7 @@ export default function Testimonials() {
               <p className="font-bold text-gray-900">
                 {testimonials[index].name}
               </p>
-              <p className="text-sm text-gray-500">
+              <p className="text-sm text-gray-700 md:text-gray-500">
                 {testimonials[index].role}
               </p>
             </div>
@@ -79,9 +86,10 @@ export default function Testimonials() {
         </AnimatePresence>
 
         {/* Controls */}
+        {/* ✅ Keep buttons INSIDE with padding so they don’t cause overflow on small screens */}
         <button
           onClick={prev}
-          className="absolute left-0 top-1/2 -translate-y-1/2 bg-white border border-gray-200 shadow p-2 rounded-full hover:bg-gray-100"
+          className="absolute left-2 md:left-0 top-1/2 -translate-y-1/2 bg-white border border-gray-200 shadow p-2 rounded-full hover:bg-gray-100 active:scale-95 transition"
           aria-label="Previous testimonial"
         >
           <ChevronLeft />
@@ -89,7 +97,7 @@ export default function Testimonials() {
 
         <button
           onClick={next}
-          className="absolute right-0 top-1/2 -translate-y-1/2 bg-white border border-gray-200 shadow p-2 rounded-full hover:bg-gray-100"
+          className="absolute right-2 md:right-0 top-1/2 -translate-y-1/2 bg-white border border-gray-200 shadow p-2 rounded-full hover:bg-gray-100 active:scale-95 transition"
           aria-label="Next testimonial"
         >
           <ChevronRight />

@@ -144,7 +144,7 @@ export default function AboutPage() {
               right steps.
             </motion.p>
 
-            <motion.div variants={fadeUp} className="mt-8 grid gap-3 sm:grid-cols-2">
+            <motion.div variants={fadeUp} className="mt-8 grid gap-3 sm:grid-cols-2 h-5 w-5 text-blue-800" strokeWidth={2.2}>
               {[
                 {
                   icon: MapPin,
@@ -373,7 +373,7 @@ export default function AboutPage() {
                   custom={i}
                   className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm"
                 >
-                  <s.icon className="h-5 w-5" />
+                  <s.icon className="h-5 w-5 text-blue-800" strokeWidth={2.2} />
                   <p className="mt-4 text-2xl font-semibold text-neutral-900">{s.value}</p>
                   <p className="mt-1 text-sm text-neutral-700">{s.label}</p>
                 </motion.div>

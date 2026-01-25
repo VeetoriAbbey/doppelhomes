@@ -2,35 +2,58 @@ import { NextResponse } from "next/server";
 import { createClient } from "../../../lib/supabase/server";
 
 export async function GET(req) {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
   const url = new URL(req.url);
-  const origin = `${url.protocol}//${url.host}`;
+  const origin = url.origin;
 
-  if (!user) return NextResponse.redirect(`${origin}/affiliate/login`);
+  const supabase = await createClient();
 
-  // Is admin?
-  const { data: adminRow } = await supabase
+  // 1) Check session/user
+  const {
+    data: { user },
+    error: userErr,
+  } = await supabase.auth.getUser();
+
+  if (userErr || !user) {
+    return NextResponse.redirect(new URL("/affiliate/login", origin));
+  }
+
+  // 2) Check admin (use maybeSingle to avoid throw)
+  const { data: adminRow, error: adminErr } = await supabase
     .from("admin_users")
     .select("id")
     .eq("id", user.id)
-    .single();
+    .maybeSingle();
 
-  if (adminRow) {
-    // send admin to admin area
-    return NextResponse.redirect(`${origin}/affiliate`);
+  if (adminErr) {
+    // If table/permissions issue, fail gracefully
+    return NextResponse.redirect(new URL("/affiliate/apply", origin));
   }
 
-  // Is affiliate + approved?
-  const { data: aff } = await supabase
+  if (adminRow) {
+    // ✅ Choose ONE of these depending on your actual admin route:
+
+    // If your admin area is /admin:
+    // return NextResponse.redirect(new URL("/admin", origin));
+
+    // If your admin area is /affiliate (as you had it):
+    return NextResponse.redirect(new URL("/affiliate", origin));
+  }
+
+  // 3) Check affiliate status
+  const { data: aff, error: affErr } = await supabase
     .from("affiliates")
     .select("status")
     .eq("id", user.id)
-    .single();
+    .maybeSingle();
 
-  if (!aff) return NextResponse.redirect(`${origin}/affiliate/apply`);
-  if (aff.status !== "approved") return NextResponse.redirect(`${origin}/affiliate/pending`);
+  // If affiliates table has RLS issues, don't crash
+  if (affErr) {
+    return NextResponse.redirect(new URL("/affiliate/apply", origin));
+  }
 
-  return NextResponse.redirect(`${origin}/affiliate/dashboard`);
+  if (!aff) return NextResponse.redirect(new URL("/affiliate/apply", origin));
+  if (aff.status !== "approved")
+    return NextResponse.redirect(new URL("/affiliate/pending", origin));
+
+  return NextResponse.redirect(new URL("/affiliate/dashboard", origin));
 }

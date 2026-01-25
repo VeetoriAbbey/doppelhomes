@@ -4,7 +4,6 @@ import { notFound } from "next/navigation";
 import { properties } from "@/app/data/properties";
 
 export async function generateMetadata({ params }) {
-  // ✅ Next.js 15+: params can be a Promise
   const { id } = await params;
   const pid = Number(id);
 
@@ -28,7 +27,6 @@ export async function generateMetadata({ params }) {
 }
 
 export default async function PropertyDetailsPage({ params }) {
-  // ✅ Next.js 15+: params can be a Promise
   const { id } = await params;
   const pid = Number(id);
 
@@ -41,13 +39,15 @@ export default async function PropertyDetailsPage({ params }) {
 
   const brief =
     property.description ||
-    `${property.bedrooms} bedroom ${property.type} Located at ${property.location} Sitting on a ${property.size} Plot of Land.`;
+    `${property.bedrooms} bedroom ${property.type} located at ${property.location}, sitting on a ${property.size} plot of land.`;
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-22">
+    // ✅ Prevent tiny horizontal overflow = stops “shake”
+    <main className="max-w-6xl mx-auto px-4 py-20 overflow-x-hidden">
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <div>
-          <p className="text-sm text-gray-500">
+          {/* ✅ stronger text on mobile */}
+          <p className="text-sm text-gray-700 md:text-gray-500">
             <Link className="hover:underline" href="/properties/all">
               Properties
             </Link>{" "}
@@ -55,79 +55,78 @@ export default async function PropertyDetailsPage({ params }) {
             <Link className="hover:underline" href={`/properties/${areaSlug}`}>
               {areaLabel}
             </Link>{" "}
-            / <span className="text-gray-700">{property.title}</span>
+            / <span className="text-gray-900">{property.title}</span>
           </p>
 
-          <h1 className="text-3xl font-bold mt-2">{property.title}</h1>
-          <p className="text-gray-600 mt-2">{brief}</p>
+          <h1 className="text-3xl font-bold mt-2 text-gray-900">
+            {property.title}
+          </h1>
+
+          {/* ✅ stronger on mobile */}
+          <p className="text-gray-800 md:text-gray-600 mt-2">
+            {brief}
+          </p>
         </div>
 
         <a
           href={property.schedule}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-blue-700 hover:bg-green-500 text-white px-5 py-3 rounded-full transition"
+          className="bg-blue-700 hover:bg-green-500 text-white px-5 py-3 rounded-full transition active:scale-[0.98]"
         >
           Schedule a visit
         </a>
       </div>
 
-      <div className="relative w-full h-[360px] rounded-3xl overflow-hidden mt-8">
+      <div className="relative w-full h-[320px] md:h-[360px] rounded-3xl overflow-hidden mt-8">
         <Image
           src={property.image}
           alt={property.title}
           fill
           className="object-cover"
           priority
+          sizes="(max-width: 768px) 100vw, 900px"
         />
       </div>
 
       <section className="mt-10 grid md:grid-cols-2 gap-8">
         <div className="bg-white rounded-3xl border p-6">
-          <h2 className="text-xl font-semibold mb-4">Property Details</h2>
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">
+            Property Details
+          </h2>
 
-          <ul className="space-y-3 text-gray-700">
-            <li>
-              <span className="font-medium">Location:</span> {property.location}
-            </li>
-            <li>
-              <span className="font-medium">Area:</span> {areaLabel}
-            </li>
-            <li>
-              <span className="font-medium">Type:</span> {property.type}
-            </li>
-            <li>
-              <span className="font-medium">Bedrooms:</span> {property.bedrooms}
-            </li>
-            <li>
-              <span className="font-medium">Size:</span> {property.size}
-            </li>
-            <li>
-              <span className="font-medium">BQ:</span> {property.BQ ? "Yes" : "No"}
-            </li>
-            <li>
-              <span className="font-medium">Price:</span> {property.price}
-            </li>
+          {/* ✅ not faint */}
+          <ul className="space-y-3 text-gray-800 md:text-gray-700">
+            <li><span className="font-medium">Location:</span> {property.location}</li>
+            <li><span className="font-medium">Area:</span> {areaLabel}</li>
+            <li><span className="font-medium">Type:</span> {property.type}</li>
+            <li><span className="font-medium">Bedrooms:</span> {property.bedrooms}</li>
+            <li><span className="font-medium">Size:</span> {property.size}</li>
+            <li><span className="font-medium">BQ:</span> {property.BQ ? "Yes" : "No"}</li>
+            <li><span className="font-medium">Price:</span> {property.price}</li>
           </ul>
         </div>
 
         <div className="bg-white rounded-3xl border p-6">
-          <h2 className="text-xl font-semibold mb-4">Next Steps</h2>
-          <p className="text-gray-700">
+          <h2 className="text-xl font-semibold mb-4 text-gray-900">
+            Next Steps
+          </h2>
+
+          <p className="text-gray-800 md:text-gray-700">
             Want more listings in <span className="font-medium">{areaLabel}</span>?
           </p>
 
           <div className="mt-5 flex gap-3 flex-wrap">
             <Link
               href={`/properties/${areaSlug}`}
-              className="border border-gray-300 px-4 py-2 rounded-full hover:bg-blue-600 transition"
+              className="border border-gray-300 px-4 py-2 rounded-full transition hover:bg-blue-600 hover:text-white active:scale-[0.98]"
             >
               View more in {areaLabel}
             </Link>
 
             <Link
               href="/properties/all"
-              className="border border-gray-300 px-4 py-2 rounded-full hover:bg-blue-600 transition"
+              className="border border-gray-300 px-4 py-2 rounded-full transition hover:bg-blue-600 hover:text-white active:scale-[0.98]"
             >
               Back to all properties
             </Link>

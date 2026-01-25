@@ -213,7 +213,7 @@ export default function ContactPage() {
             variants={fadeUp}
             className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm"
           >
-            <Phone className="h-5 w-5" />
+            <Phone className="h-5 w-5 text-blue-800" strokeWidth={2.2} />
             <p className="mt-3 font-semibold text-neutral-900">Phone</p>
             <p className="mt-1 text-sm text-neutral-700">{COMPANY.phone}</p>
             <a
@@ -228,7 +228,7 @@ export default function ContactPage() {
             variants={fadeUp}
             className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm"
           >
-            <Mail className="h-5 w-5" />
+            <Mail className="h-5 w-5 text-blue-800" strokeWidth={2.2} />
             <p className="mt-3 font-semibold text-neutral-900">Email</p>
             <p className="mt-1 text-sm text-neutral-700">{COMPANY.email}</p>
             <a
@@ -243,7 +243,7 @@ export default function ContactPage() {
             variants={fadeUp}
             className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm"
           >
-            <MapPin className="h-5 w-5" />
+            <MapPin className="h-5 w-5 text-blue-800" strokeWidth={2.2} />
             <p className="mt-3 font-semibold text-neutral-900">Office</p>
             <p className="mt-1 text-sm text-neutral-700">{COMPANY.address}</p>
             <Link
