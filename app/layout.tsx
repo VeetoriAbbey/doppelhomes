@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import Header from "@/components/Header";
 import WhatsappFloating from "@/app/components/WhatsappFloating";
@@ -43,7 +44,13 @@ export default function RootLayout({
           <Footer />
           
         </main>
-        
+<Script
+  id="hs-script-loader"
+  strategy="afterInteractive"
+  src="//js-eu1.hs-scripts.com/147956195.js"
+/>
+
+
       </body>
     </html>
   );

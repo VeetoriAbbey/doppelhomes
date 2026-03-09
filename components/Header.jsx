@@ -21,6 +21,7 @@ const LOCATIONS = [
   { label: "Airport Road", slug: "airport-road" },
   { label: "Kabusa", slug: "kabusa" },
   { label: "Kyami", slug: "kyami" },
+  { label: "Apo", slug: "apo" },
 ];
 
 function cn(...classes) {
